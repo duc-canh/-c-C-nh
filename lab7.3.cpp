@@ -1,26 +1,30 @@
 #include <stdio.h>
 
 int main(){
-	int ary[5];
-	int i,x;
+	int i,x,n;
+	printf("nhap n : ");
+	scanf("%d",&n);
+	int arr[n];
 	int count = 0;
 	
 	printf("hay nhap so vao day\n");
-	for(i=0;i<5;i++){
-		scanf("%d",&ary[i]);
+	for(i=0;i<n;i++){
+		scanf("%d",&arr[i]);
 	}
 	printf("hay nhap so can tim\n");
 	scanf("%d",&x);
 	
-	for(i=0;i<5;i++){
-		if(ary[i] == x){
-			count++;
+	for(i=0;i<n;i++){
+		if(arr[i] == x){
+			count=1;
+			break;
 		}
 	}
-	if(count == 0){
-		printf("%d k thuoc mang",x);
-	}else{
+	if(count==1){
 		printf("%d thuoc mang",x);
+	}else{
+		printf("%d k thuoc mang",x);
 	}
+	
 	
 }	
